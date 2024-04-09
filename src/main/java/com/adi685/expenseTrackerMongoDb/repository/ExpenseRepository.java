@@ -14,8 +14,8 @@ public interface ExpenseRepository extends MongoRepository<Expense, String> {
   @Query("{'name' : ?0}")
   Optional<Expense> findByName(String name);
 
-  @Query("{category':?0")
-  Optional<List<Expense>> findByCategory(String category);
+  @Query("{'category' : ?0}")
+  Optional<List<Expense>> findByCategory(ExpenseCategory category);
 
 //  @Query("{'name' : ?0, 'amount' : ?1")
 //  Optional<Expense> findByName(String name, BigDecimal amount);

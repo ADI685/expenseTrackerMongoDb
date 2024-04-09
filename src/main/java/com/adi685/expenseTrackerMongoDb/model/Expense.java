@@ -22,6 +22,7 @@ public class Expense {
   private String expenseName;
 
   @Field("category")
+  @Indexed
   private ExpenseCategory expenseCategory;
 
   @Field("discription")

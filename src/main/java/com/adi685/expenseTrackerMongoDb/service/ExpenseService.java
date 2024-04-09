@@ -48,7 +48,7 @@ public class ExpenseService {
   }
 
   public List<Expense> getExpenseByCategory(ExpenseCategory category){
-    return expenseRepository.findByCategory(category.name())
+    return expenseRepository.findByCategory(category)
         .orElseThrow(()->new RuntimeException(String.format("No data available for category %s",category)));
   }
 }
